@@ -10,7 +10,7 @@ export const sendParam = {
 
 export async function firstQueryDataServer() {
   try {
-    const response = await axios.get(`https://ip-api.com/json/?fields=countryCode`);
+    const response = await axios.get(`https://ipapi.co/country/`);
     return response;
   } catch (error) {
     return false;
@@ -46,9 +46,9 @@ export async function getDataServer(keyword, countryCode, page) {
     setTimeout(() => {
       clearInterval(id);
       getDataServer('', 'US', '');
-      // localStorage.setItem('localCountryCode', 'US');
-      // localStorage.setItem('localCountryName', 'United States of America');
-      // document.querySelector('#search-country').value = 'United States of America';
+      localStorage.setItem('localCountryCode', 'US');
+      localStorage.setItem('localCountryName', 'United States of America');
+      document.querySelector('#search-country').value = 'United States of America';
     }, 15000);
   }
 

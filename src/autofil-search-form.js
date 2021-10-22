@@ -22,7 +22,8 @@ const inputData = localStorage.getItem('searchData');
 
 async function autofill() {
   const getCountryCodeByIP = await firstQueryDataServer();
-  const countryCodeValidator = getCountryCodeByIP ? getCountryCodeByIP.data.countryCode : 'AU';
+  console.log(getCountryCodeByIP);
+  const countryCodeValidator = getCountryCodeByIP ? getCountryCodeByIP.data : 'US';
   const countryCodeCheck = countries.find(item => item.countryCode === countryCodeValidator);
   countryNode.value = countryCodeCheck.countryName;
   if (!localStorage.getItem('localCountryName') && !localStorage.getItem('localCountryCode')) {

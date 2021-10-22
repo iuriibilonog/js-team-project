@@ -8,14 +8,14 @@ export const sendParam = {
   apikey: config.key,
 };
 
-export async function firstQueryDataServer() {
-  try {
-    const response = await axios.get(`http://ip-api.com/json/?fields=countryCode`);
-    return response;
-  } catch (error) {
-    return false;
-  }
-}
+// export async function firstQueryDataServer() {
+//   try {
+//     const response = await axios.get(`http://ip-api.com/json/?fields=countryCode`);
+//     return response;
+//   } catch (error) {
+//     return false;
+//   }
+// }
 
 export async function getDataServer(keyword, countryCode, page) {
   keyword === '' ? delete sendParam.keyword : (sendParam.keyword = keyword);

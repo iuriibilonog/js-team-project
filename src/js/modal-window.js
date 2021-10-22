@@ -9,7 +9,7 @@ import { convertMs, addLeadingZero } from './convertMS';
 export async function getEventDetails(id) {
   const preloadNode = await showPreloader();
   const response = await axios.get(
-    `http://app.ticketmaster.com/discovery/v2/events/${id}?apikey=${config.key}`,
+    `https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=${config.key}`,
   );
   preloadNode.remove();
   if (response.status >= 200 && response.status < 300) {

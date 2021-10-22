@@ -1,0 +1,26 @@
+<header class="header">
+    <div class="logo__block">
+        <a href="./index.html"><img src="./img/logo.svg" alt="logo" class="logo"></a>
+    </div>
+
+    <h1 class="heroTitle">FIND BEST EVENTS <br> AROUND THE WORLD</h1>
+
+    <form name="search-form" id="search-form" autocomplete="off">
+        <span class="search-form-wrapper">
+            <input type="text" name="" id="search-input" placeholder="Start searching" class="search-input">
+            <svg class="search-icon" width="12" height="12">
+                <use href="./img/sprite.svg#iconSearch"></use>
+            </svg>
+        </span>
+        <span class="search-form-wrapper">
+            <input list="choose-country" name="fav" id="search-country" placeholder="Choose country"
+                class="search-input">
+        </span>
+
+        <datalist id="choose-country" class="countries-list">
+
+        </datalist>
+
+        <button type="reset" class="search-input-btn">Reset</button>
+    </form>
+</header>

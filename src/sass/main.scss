@@ -1,7 +1,20 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+// // UTILS
+@import './utils/variables';
+@import './utils/breakpoints';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+// BASE
+@import './base/common';
+
+// LAYOUT
+@import './layout/header-hero';
+@import './layout/search-form';
+@import './layout/background';
+@import './layout/main-content';
+@import './layout/pagination';
+@import './layout/footer';
+// COMPONENTS
+@import './components/modal-btn';
+@import './components/modal-window';
+@import './components/modal-team';
+@import './components/scrollUp';
+@import './components/preloader';

@@ -12,7 +12,9 @@ export function convertMs(ms) {
   // Remaining minutes
   const minutes = Math.floor(((ms % day) % hour) / minute);
 
-  return { days, hours, minutes };
+  const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+
+  return { days, hours, minutes, seconds };
 }
 
 export function addLeadingZero(value) {
